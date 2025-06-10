@@ -1,0 +1,263 @@
+/* a minimalist set of CSS resets */
+
+/* Notes:
+ * - try to go through & move the styling from index.html to here
+ * - drop in assets from marketing folder, gather extras for links n stuff
+ * 
+ * - once we get branding, we can get a copy of our fonts n put it in here
+ * 
+ */
+
+/* Calendar:
+ * - find a way to link to an RSVP form (google form?)
+ *     -> see if there's a way to link directly to a sheets form (maybe use the form thing for CSS)
+ * - carousel for insta posts? (auto)
+ *   -> alternatively, could use this for general pics
+ * 
+ */
+
+/* font declaration template:
+@font-face {
+  font-family: FontName;
+  src: url("thelinktothefontinGlitch.com")
+    format ("dotcloser");
+}
+
+example:
+@font-face {
+  font-family: Lydian;
+  src: url("https://cdn.glitch.global/f58bfe5b-8b46-40fb-9359-3b2d1d10a4c7/Lydian%20Regular.ttf?v=1744648015206")
+    format ("truetype");
+}
+ */
+
+
+/* default to border-box */
+/* html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* adjust typography defaults */
+/* body {
+  margin: 1rem;
+  font-family: sans-serif;
+  line-height: 1.5;
+} */
+
+/* images and videos max out at full width /
+img,
+video {
+  height: auto;
+  max-width: 100%;
+} */
+
+/* font access */
+@font-face {
+  font-family: Neue Haas Unica;
+  src: url("https://c.webfontfree.com/c.js?f=NeueHaasUnicaW1G-Regular")
+    format ("dotcloser");
+}
+@font-face {
+  font-family: Owners;
+  src: url("thelinktothefontinGlitch.com")
+    format ("dotcloser");
+}
+@font-face {
+  font-family: Permanent Marker;
+  src: url("thelinktothefontinGlitch.com")
+    format ("dotcloser");
+}
+
+/* Base Styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  color: white;
+/*   font-family: 'Helvetica Neue', sans-serif; */
+  font-family: 'NeueHaasUnicaW1G-Regular', sans-serif;
+}
+
+a {
+  color: #facc15; /* yellow-400 */
+  text-decoration: underline;
+}
+
+h1, h2 {
+  font-weight: bold;
+}
+
+.highlight {
+  color: #22d3ee; /* cyan-400 */
+}
+
+.accent {
+  font-family: 'Permanent Marker', cursive;
+  color: #f472b6; /* pink-400 */
+  font-size: 1.5rem;
+}
+
+/* Layout Containers */
+.container {
+  max-width: 64rem; /* ~1024px */
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Sections */
+.hero {
+  text-align: center;
+  padding: 6rem 1.5rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.hero p {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+}
+
+.about, .events, .join, .instagram {
+  padding: 4rem 1.5rem;
+}
+
+.about {
+  background-color: #1f2937; /* gray-900 */
+}
+
+.about p,
+.join p {
+  color: #d1d5db; /* gray-300 */
+}
+
+.events h2, .instagram h2, .join h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Event List */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.event {
+  background-color: #1f2937; /* gray-800 */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+  transition: 0.3s all ease-in-out;
+}
+
+.event:hover {
+  transform: scale(1.05);
+}
+
+.event.one {
+  background-color: #1f2937;
+}
+
+.event.one:hover {
+  background-color: #0e7490; /* cyan-700 */
+}
+
+.event.two {
+  background-color: #1f2937;
+}
+
+.event.two:hover {
+  background-color: #ea580c; /* orange-600 */
+}
+
+.event-title {
+  font-weight: bold;
+  color: #67e8f9; /* cyan-300 or orange-300 */
+}
+
+.event-time {
+  font-size: 0.875rem;
+  color: #d1d5db;
+}
+
+.calendar-link {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.eventTBA {
+  background-color: #1f2937; /* gray-800 */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+  transition: 0.3s all ease-in-out;
+  background-color: #1f2937;
+}
+
+.eventTBA:hover {
+  background-color: #0e7490; /* cyan-700 */
+  transform: scale(1.05);
+}
+
+.calendar-link a {
+  background-color: #ec4899; /* pink-600 */
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: background-color 0.2s ease;
+}
+
+.join a {
+  background-color: #facc15;
+  color: #000000;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+.calendar-link a:hover {
+  background-color: #f472b6; /* pink-500 */
+}
+
+/* Instagram */
+.instagram {
+  background-color: #000000;
+}
+
+.instagram iframe {
+  width: 100%;
+  height: 510px;
+  border: none;
+  overflow: hidden;
+}
+
+/* Join */
+.join {
+  background-color: #1f2937;
+  text-align: center;
+}
+
+.join a:hover {
+  background-color: #fde047;
+}
+
+/* Footer */
+footer {
+  background-color: #000000;
+  text-align: center;
+  color: #6b7280; /* gray-500 */
+  font-size: 0.875rem;
+  padding: 1.5rem 0;
+}
