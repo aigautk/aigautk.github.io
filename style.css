@@ -1,32 +1,19 @@
- /* a minimalist set of CSS resets */
+/* a minimalist set of CSS resets */
 
 /* Notes:
- * - Reorder styling to make sections easier to find
- * - coninue adding assets from marketing folder, gather extras for links n stuff
+ * - try to go through & move the styling from index.html to here
+ * - drop in assets from marketing folder, gather extras for links n stuff
  * 
- * - update font links so we don't lose them (Owners & Permanent Marker)
- *
- * - modify sizes to fid different screen widths
- *   -> make a mobile screen width version for compatibility??
+ * - once we get branding, we can get a copy of our fonts n put it in here
  * 
  */
 
 /* Calendar:
  * - find a way to link to an RSVP form (google form?)
- *   -> see if there's a way to link directly to a sheets form (maybe use the form thing for CSS)
+ *     -> see if there's a way to link directly to a sheets form (maybe use the form thing for CSS)
  * - carousel for insta posts? (auto)
  *   -> alternatively, could use this for general pics
  * 
- * - incorporate branding shapes to unify w/ main page
- *   -> update sign up links on events to migrate to a corresponding sign-up form
- * 
- */
-
-/* Additional Pages:
- * - determine organization in styling document
- * - prototype in Figma first w/ Diego to determine look
- *   -> base code any additional pages
- *   -> prototype navigation system (important links bar, drop down, etc.)
  */
 
 /* font declaration template:
@@ -117,130 +104,12 @@ h1, h2 {
 
 /* Layout Containers */
 .container {
-  /*max-width: 64rem; /* ~1024px */
-  max-width: 58rem;
+  max-width: 64rem; /* ~1024px */
   margin: 0 auto;
   padding: 0 1.5rem;
 }
 
-/* Header Images */
-.header_box {
-  display: flex;
-  /* position: absolute; */
-  justify-content: center;
-  width: 100vw;
-  height: 300px;
-
-  /* padding: 10px; */
-  gap: 50px;
-  overflow: hidden;
-
-}
-
-.header_left {
-  position: absolute;
-  display: flex;
-  width: 100%;
-  height: 20vw;
-  /* height: fit-content; */
-  
-}
-.header_mid {
-  position: absolute;
-  display: flex;
-  width: 100%;
-  /* height: fit-content; */
-  /* text-align: center; */
-  justify-content: center;
-
-  padding-top: 20px;
-
-}
-.header_right {
-  position: absolute;
-  display: flex;
-  width: 100%;
-  height: 25vw;
-
-  /* height: 100%; */
-
-  /* clip-path: border-box; */
-  overflow: clip;
-  display: flow-root
-
-}
-
-.header_logo {
-  position: absolute;
-
-  width: 300px;
-  height: fit-content;
-}
-
-.pink_diamond {
-  position: absolute;
-
-  width: 180px;
-  height: fit-content;
-  rotate: 15deg;
-
-  left: -50px;
-  top: 180px;
-}
-.blue_windmill {
-  position: absolute;
-
-  width: 180px;
-  height: fit-content;
-  rotate: -15deg;
-
-  left: 50px;
-  top: -30px;
-}
-.yellow_clover {
-  position: absolute;
-
-  width: 140px;
-  height: fit-content;
-  rotate: 25deg;
-
-  left: 190px;
-  top: 140px;
-}
-.green_star {
-  position: absolute;
-
-  width: 190px;
-  height: auto;
-  rotate: 15deg;
-
-  left: 1080px;
-  top: -50px;
-}
-.orange_clover_outer {
-  position: absolute;
-
-  width: 280px;
-  height: auto;
-  rotate: 25deg;
-
-  left: 1350px;
-  top: 100px;
-}
-.orange_clover_inner {
-  position: absolute;
-
-  width: 150px;
-  height: auto;
-  rotate: 25deg;
-
-  left: 1416px;
-  top: 166px;
-}
-
 /* Sections */
-
-
 .hero {
   text-align: center;
   padding: 6rem 1.5rem;
@@ -260,21 +129,10 @@ h1, h2 {
 }
 
 .about {
-  /*background-color: #1f2937; /* gray-900 */
-  background-color: #E99323;
-  color: #231F20; /* setting this to the black we have */
-}
-.about p {
-  color: #231F20; /* setting this to the black we have */
-  font-size: 1.5rem;
+  background-color: #1f2937; /* gray-900 */
 }
 
-.container p {
-  font-size: 1.5rem;
-}
-
-
-
+.about p,
 .join p {
   color: #d1d5db; /* gray-300 */
 }
@@ -384,16 +242,6 @@ ul {
   border: none;
   overflow: hidden;
 }
-.accent a {
-  text-decoration: none;
-  text-align: center;
-}
-.accent a:hover {
-  color: #e789df;
-}
-.follow {
-  text-align: center;
-}
 
 /* Join */
 .join {
@@ -407,73 +255,9 @@ ul {
 
 /* Footer */
 footer {
-  /* background-color: #000000; */
-  text-align: center;
-  color: #ffffff; 
-  font-size: 0.875rem;
-  padding: 1.5rem 0;
-}
-
-/* Updated footer */
-.bottom_box {
-  background-color: #3BA1DA;
+  background-color: #000000;
   text-align: center;
   color: #6b7280; /* gray-500 */
-  font-size: 1.2rem;
-  padding: 1.5rem;
-
-  display: flex;
-  /* gap: 8.5rem; */
-  justify-content: center;
-}
-
-/* .bottom_box p {
-
-} */
-
-.bottom_left {
-  position: relative;
-  width: 100%;
-  padding-left: 2rem;
-}
-.bottom_mid {
-  width: 10%;
-}
-.bottom_right {
-  position: relative;
-  padding: 2rem;
-  width: 100%;
-}
-
-.bottom_box a {
-  background-color: #facc15;
-  color: #000000;
-  padding: 0.75rem 2rem;
-  border-radius: 100px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background-color 0.2s ease;
-}
-.bottom_box a:hover {
-  background-color: #fde047;
-}
-.bottom_box p {
-  color:#231F20;
-}
-.bottom_box h2 {
-  color:#231F20;
-}
-
-.follow-link a {
-  background-color: #ec4899;
-  color: #ffffff;
-  padding: 0.75rem 2rem;
-  border-radius: 100px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background-color 0.2s ease;
-}
-.follow-link a:hover {
-  background-color: #f472b6;
-  
+  font-size: 0.875rem;
+  padding: 1.5rem 0;
 }
